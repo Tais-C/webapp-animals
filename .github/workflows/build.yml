@@ -19,5 +19,5 @@ jobs:
         run: yarn install
         
       - name: Run yarn lint
-        run: yarn lint
+        run: yarn eslint .
       
