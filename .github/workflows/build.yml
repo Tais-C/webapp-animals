@@ -21,4 +21,15 @@ jobs:
         
       - name: Run yarn lint
         run: yarn eslint .
-      
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest
+          push: false
+          
