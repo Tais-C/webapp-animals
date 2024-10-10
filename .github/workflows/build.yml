@@ -1,5 +1,6 @@
 name: Build and test
 on:
+  workflow_dispatch: # Enables the workflow to be triggered manually
   push:
     branches:
       - main
