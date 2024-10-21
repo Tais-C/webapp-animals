@@ -48,3 +48,13 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/webapp:latest
           push: true
           
+  snyk:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run Snyk to check Docker images for vulnerabilities
+      uses: snyk/actions/docker@master
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      with:
+        image: taisc/webapp
+        args: --severity-threshold=high
