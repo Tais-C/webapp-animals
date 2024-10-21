@@ -1,3 +1,23 @@
-node_modules/
-extensions/
-uploads/
+# Node.js dependencies
+node_modules
+
+# Python virtual environment
+.venv
+
+# Database files
+database
+
+# Git
+.git
+.gitignore
+.github
+
+# Docker-related files
+.dockerignore
+
+# Local configuration files
+.env
+
+# Documentation
+README.md
+
