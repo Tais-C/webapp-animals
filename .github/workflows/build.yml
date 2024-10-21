@@ -22,6 +22,12 @@ jobs:
       - name: Run yarn lint
         run: yarn eslint .
 
+      - name: Start the server
+        run: |
+          yarn start &
+          sleep 5
+          curl http://localhost:3000/animals || echo "Server not running"
+          
       - name: Run tests
         run: yarn test
 
