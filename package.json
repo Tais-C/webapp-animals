@@ -29,6 +29,7 @@
     "node-fetch": "^3.3.2"
   },
   "resolutions": {
-    "ip": "2.0.1"
+    "ip": "2.0.1",
+    "braces": "3.0.3"
   }
 }
